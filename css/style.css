@@ -606,39 +606,6 @@ margin: 0px 10px 10px 10px;
     width: 800px;
   }
 }
-@media only screen and (min-width: 340px) and (max-width:1024px) {
-  .page{
-    transition: background-color 0.5s ease-in-out;
-  }
-  .expand-icon{
-    display: block;
-  }
-  .sidebar{
-    position: absolute;
-    background-color: #2c3e50;
-    left: -32%;
-    transition: left 0.5s ease-in-out;
-    
-
-  /* for sidebar to stay on top */
-  z-index: 1;
-  transition: left 0.5s ease-in-out;
-  }
-  .exit {
-    cursor: pointer;
-    font-weight: 800;
-    color: white;
-    float: right;
-    padding: 1.1rem;
-  }
-  #toggle:checked ~ .sidebar {
-    left: 0;
-  }
-  
-  #toggle:checked ~ .page {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
 
 
 
