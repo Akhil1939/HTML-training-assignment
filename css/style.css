@@ -717,7 +717,9 @@ font-size: 30px;
 font-weight: bold;
 color: #000000;
 }
-.analysis
+.analysis-form-wrapper{
+  padding: 22.5px 30.5px 22.5px 30.5px;
+}
 .sub-title span{
   width: 121px;
 height: 29px;
@@ -727,4 +729,216 @@ color: #3E3E3E;
 }
 .sub-title{
   margin-top: 22.52px;
+  margin-bottom: 15px;
+}
+.one-column{
+  margin-bottom: 44.2px;
+}
+.two-field{
+  width: 563px;
+height: 49px;
+border: 1px solid #ADADAD;
+}
+
+
+.did-floating-label-content { 
+  position:relative; 
+  margin-bottom:20px;   
+}
+.did-floating-label {
+  font-size:13px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:11px;
+  padding:0 5px;
+  background:#fff;
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top:-8px;
+  font-size:13px;
+}
+.two-column{
+  margin-bottom: 44.2px;
+}
+.three-column-field{
+  width: 364px;
+height: 47px;
+border-radius: 5px;
+}
+.three-column{
+  margin-bottom: 35.02px;
+}
+.four-column{
+  width: 266px;
+height: 49px;
+border: 1px solid #ADADAD;
+border-radius: 5px;
+}
+.four-column-main{
+  margin-bottom: 43.42px;
+}
+.upload-btn{
+  width: 124px;
+height: 36px;
+/* UI Properties */
+border: 1px solid #C8242F;
+border-radius: 18px;
+
+}
+.upload-file-text span{
+  width: 91px;
+height: 16px;
+font-family: Roboto;
+font-size: 12px;
+color: #ADADAD;
+}
+.upload{
+  margin-bottom: 36.15px;
+}
+.sub-title-2{
+height: 24px;
+font-size: 18px;
+font-family: Roboto;
+color: #3E3E3E;
+margin-bottom: 15.85px;
+font-weight: bold;
+}
+
+input[type=radio]{
+  accent-color: #FF0000;
+}
+.radio-button{
+  margin-bottom: 32.52px;
+}
+
+.contain {
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+}
+.contain:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.contain input:checked ~ .checkmark {
+  background-color: red;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+.contain .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.check-text{
+  position: relative;
+  margin-left: 20px;
+  top: -3px;
+  
+}
+.check-box{
+  margin-bottom: 33px;
+}
+.snakes{
+margin-bottom: 34.15px;
+}
+.snack{
+  width: 563px;
+height: 44px;
+padding: 5px;
+}
+.snack-img{
+  height: 20px;
+  width: 20px;
+}
+.snack-1{
+  border: 1px solid #FF3535;
+  color: #FF3535;
+}
+.snack-2{
+  border: 1px solid #00B9E1;
+  color: #00B9E1;
+}
+.snack-3{
+  border: 1px solid #FFA800;
+  color: #FFA800;
+}
+.snack-4{
+  border: 1px solid #00AF27;
+  color: #00AF27;
+}
+.button-1{
+  width: 124px;
+height: 45px;
+  color: white;
+  background: #C8242F;
+  border-radius: 23px;
+}
+.button-2{
+  width: 145px;
+height: 44px;
+color: #C8242F;
+border: 1px solid #C8242F;
+border-radius: 22px;
+margin-left: 20.5px;
+}
+.call-to-action{
+  margin-bottom: 34.65px;
+}
+.active-tab{
+  border-bottom: 3px solid red;
+  color: #C8242F;
+}
+.tab{
+  width: 70px;
+  font-size: 15px;
+  font-family: roboto;
+
+  margin-right: 10px;
+  padding-bottom: 13.37px;
+}
+.line hr{
+  height: 1px;
+  position: relative;
+  top: -18px;
 }
