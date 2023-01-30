@@ -201,11 +201,19 @@ margin: 0px auto 0px auto;
 .nav-left{
   display: flex;
 }
+#toggle{
+  display: none;
+}
 .expand-icon {
   width: 20px;
   height: 18px;
   margin-right: 25px;
+  display: none;
+  cursor: pointer;
 }
+/* //sidebar// */
+
+
 .nav-logo{
   width: 142px;
 height: 30px;
@@ -260,7 +268,7 @@ margin-left: 14.54px;
   display: flex;
   width: 1560px;
 }
-.dashboard-sidebar{
+.sidebar{
   width: 242px;
 height: 1279px;
 
@@ -380,6 +388,7 @@ color: #3E3E3E;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  margin-bottom: 33px;
 }
 .sales-graph{
   width: 802px;
@@ -446,153 +455,43 @@ justify-content: center;
 }
 .sales-by-country{
 }
-.dashboard-invoices-wrapper{
-  /* / width: 1217px; / */
-  height: 558px;
-  margin: 30px 51px 0 0;
-  background-color: white;
-  border-radius: 5px;
-
+.invoice{
+  padding-left: 29px;
+  padding-right: 29px;
 }
-.dashboard-invoices{
- 
-  display: flex;
-
+.heading{
+  margin-top: 22.52px ;
 }
-
-.dashboard-invoices-header{
-  display: flex;
-  margin: 22.52px 29px 0 29px ;
-  width: 1217px;
-  justify-content: space-between;
-}
-
-#dashboard-invoices-header-left{
-  font: normal normal medium 22px/29px Roboto;
-color: #3E3E3E;
-font-weight: 500;
-font-size: 22px;
-}
-#dashboard-invoices-header-text-right{
-  font: normal normal normal 12px/16px Roboto;
-color: #C8242F;
-font-size: 12px;
-font-weight: 400;
-text-decoration: underline;
-}
-#dashboard-invoice-table{
-  width: 100%;
-  text-align: left;
-  padding:29px;
-  color: #3E3E3E;
-  font-size: 15px;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #E9E9E9;
-}
-
-#last-row-of-invoice td{
-  border: none;
-}
-.invoice-status-box-paid{
+.text-success{
   width: 50px;
-  text-align: center;
 height: 26px;
-line-height: 26px;
-background: #EBFFEF 0% 0% no-repeat padding-box;
-border-radius: 5px;
-}
-.invoice-status-box-failed{
-  width: 60px;
-  height: 26px;
-  text-align: center;
-  font: normal normal normal 15px/20px Roboto;
-  color: #FF4545;
-  line-height: 26px;
-  background: #FFF5F5 0% 0% no-repeat padding-box;
-border-radius: 5px;
-}
-.invoice-status-box-pending{
-  width: 75px;
-height: 26px;
-background: #F8F8F8 0% 0% no-repeat padding-box;
-border-radius: 5px;
-text-align: center;
-line-height: 26px;
-font: normal normal normal 15px/20px Roboto;
-color: #BABABA;
-}
-
-#dashboard-invoice-table th{
-  text-align: left;
-font: normal normal normal 15px/20px Roboto;
-letter-spacing: 1.5px;
-color: #ADADAD;
-font-weight: 200;
 font-size: 15px;
+padding: 5px;
+border-radius: 5px;
+  background-color: #EBFFEF;
 }
+.text-danger{
+  width: 50px;
+height: 26px;
+font-size: 15px;
+padding: 5px;
+border-radius: 5px;
+  background-color:#FFF5F5;
 
-/* //table// */
-@media
-	  only screen 
-    and (max-width: 600px), (min-device-width: 668px) 
-    and (max-device-width: 1024px)  {
+}
+.text-secondary{
+  width: 50px;
+  height: 26px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+    background-color:#F8F8F8;
+  
+}
+.view-all{
+  
+  color:#C8242F ;}
 
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr {
-			display: block;
-		}
-
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr {
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-		}
-
-    tr {
-      margin: 0 0 1rem 0;
-    }
-      
-    tr:nth-child(odd) {
-      background: #ccc;
-    }
-    
-		td {
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee;
-			position: relative;
-			padding-left: 200px;
-		}
-
-		td:before {
-			/* Now like a table header */
-			/* position: absolute; */
-      
-			/* Top/left values mimic padding */
-			top: 0;
-			left: 6px;
-			width: 45%;
-			padding-right: 10px;
-			white-space: nowrap;
-		}
-
-		/*
-		Label the data
-    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
-		*/
-		td:nth-of-type(1):before { content: "INVOICE   "; }
-		td:nth-of-type(2):before { content: "COMPANY NAME   "; }
-		td:nth-of-type(3):before { content: "EMAIL   "; }
-		td:nth-of-type(4):before { content: "DUE DATE   "; }
-		td:nth-of-type(5):before { content: "STATUS   "; }
-		td:nth-of-type(6):before { content: "AMOUNT   "; }
-		
-	}
 
 @media only screen and (max-width: 600px) {
   .page{
@@ -647,7 +546,8 @@ align-items: center;
   height: 250px;
 }
 }
-@media only screen and (min-width: 600px) and (max-width:1024px) {
+@media only screen and (min-width: 800px) and (max-width:1024px) {
+  
   .page{
     width: fit-content;
   }
@@ -697,7 +597,48 @@ margin: 0px 10px 10px 10px;
 }
 }
 
+@media only screen and (min-width: 601px) and (max-width:799px) {
+  
+  .navbar-wrapper{
+    width:799px;
+  }
+  .dashboard-wrapper{
+    width: 800px;
+  }
+}
+@media only screen and (min-width: 340px) and (max-width:1024px) {
+  .page{
+    transition: background-color 0.5s ease-in-out;
+  }
+  .expand-icon{
+    display: block;
+  }
+  .sidebar{
+    position: absolute;
+    background-color: #2c3e50;
+    left: -32%;
+    transition: left 0.5s ease-in-out;
+    
 
+  /* for sidebar to stay on top */
+  z-index: 1;
+  transition: left 0.5s ease-in-out;
+  }
+  .exit {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    float: right;
+    padding: 1.1rem;
+  }
+  #toggle:checked ~ .sidebar {
+    left: 0;
+  }
+  
+  #toggle:checked ~ .page {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 
 
 
