@@ -1,11 +1,11 @@
 * {
-  /* background: #fafafa 0% 0% no-repeat padding-box; */
-  /* border: 1px solid red; */
   opacity: 1;
   margin: 0px ;
   padding: 0px ;
-  /* background: #FFFFFF 0% 0% no-repeat padding-box; */
-  /* border: 1px solid red; */
+}
+.off-white-bg{
+  background: #fafafa 0% 0% no-repeat padding-box;
+
 }
 .white-bg{
   background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -21,13 +21,11 @@
 .login-wrapper {
   width: 1560px;
   height: 720px;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .img {
-  width: 576px;
   width: 576px;
   height: 576px;
   border-radius: 50%;
@@ -37,10 +35,14 @@
   opacity: 1;
 }
 .login-form {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 .company-logo {
   width: 272px;
@@ -85,7 +87,6 @@
 }
 .input-password {
   height: 49px;
-
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #adadad;
   border-radius: 5px;
@@ -128,6 +129,24 @@
   font: normal normal normal 15px/20px Roboto;
   color: #c8242f;
 }
+/* //mobile// */
+@media only screen and (max-width: 600px) {  
+  .login-wrapper{
+    padding-top: 300px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img{
+    width: 500px;
+    height: 500px;
+    background-position: center;
+  }
+  .login-page{
+    width: 600px;
+   
+  }
+}
+
 
 /* //dashboard// */
 
@@ -137,14 +156,13 @@
 justify-content: center;  
 }
 .dashboard-wrapper{
-  max-width: 1560px;
+  width: 1560px;
 }
 .navbar {
-  /* width: 100%; */
+  width: 100%;
   
   height: 80px;
-  opacity: 1;
-  padding: 29px 34px;
+    padding: 29px 34px;
 }
 .nav-wrapper{
   width: 100%;
@@ -492,6 +510,126 @@ color: #ADADAD;
 font-weight: 200;
 font-size: 15px;
 }
+
+/* //table// */
+@media
+	  only screen 
+    and (max-width: 600px), (min-device-width: 668px) 
+    and (max-device-width: 1024px)  {
+
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 200px;
+		}
+
+		td:before {
+			/* Now like a table header */
+			/* position: absolute; */
+      
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+		td:nth-of-type(1):before { content: "INVOICE"; }
+		td:nth-of-type(2):before { content: "COMPANY NAME"; }
+		td:nth-of-type(3):before { content: "EMAIL"; }
+		td:nth-of-type(4):before { content: "DUE DATE"; }
+		td:nth-of-type(5):before { content: "STATUS"; }
+		td:nth-of-type(6):before { content: "AMOUNT"; }
+		
+	}
+
+@media only screen and (max-width: 600px) {
+  .page{
+    width: fit-content;
+  }
+  .dashboard-wrapper{
+    width: 600px;
+    
+  }
+  .dashboard-sidebar{
+    display: none;
+  }
+  .nav-search{
+    margin-left: 10px;
+  }
+  .notify-img{
+    margin-right: 10px;
+  }
+  .down-arrow{
+    margin-right: 10px;
+  }
+  .counts{
+    display: grid;
+    grid-template-columns: auto auto; 
+    padding-left: 10px;
+  }
+  .count{
+    margin-bottom: 10px;
+  }
+  .charts{
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
+  }
+  .paichart{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .dashboard-page{
+    background: #fafafa 0% 0% no-repeat padding-box;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    width: 600px;
+   
+
+  }
+  .sales-graph{
+    width: 600px;
+  height: 250px;
+}
+}
+
+
+
+
+
+
+
+
+
 
 
 
