@@ -14,6 +14,7 @@
   
 .login-page {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +22,11 @@
 .login-wrapper {
   width: 1560px;
   height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.image-wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 162px;
+  /* margin-left: 162px; */
 }
 .form-wrapper{
   display: flex;
@@ -131,44 +137,69 @@
   color: #c8242f;
 }
 /* //mobile// */
-@media only screen and (max-width: 600px) {  
+
+@media only screen and (min-width: 783px) and (max-width:1024px) {
   .login-wrapper{
-    padding-top: 300px;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
   }
   .img{
-    width: 500px;
-    height: 500px;
-    background-position: center;
+    height: 450px;
+    width: 450px;
   }
-  .login-page{
-    width: 600px;
+  .company-logo{
+height:45px
   }
-  .login-wrapper{
-    margin-left: 10px;
-    height: 100vh;
+  .info-text{
+    font-size: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    height: fit-content;
   }
-}
-@media only screen and (min-width: 600px) {  
-  .login-wrapper{
-    justify-content: center;
-    /* background: red; */
+  .info-text span{
+    font-size: 35px;
   }
-  .img{
-    width: 500px;
-    height: 500px;
-    background-position: center;
+  .form-label{
+    font-size:28px;
   }
-  .login-page{
-    width: 1250px;
-    min-height: 720px;
+  .form{
+    width: 300px;
   }
   
 }
-@media only screen and (min-width: 992px) {
-  .login-page{
-    width: 100%;
+@media only screen and (min-width: 360px) and (max-width:782px) {
+  .login-wrapper{
+    flex-direction: column;
+  }
+  .login-wrapper{
+    margin-top: 100px;
+    height: 1500px;
+    justify-content: center;
+  }
+  .img{
+    width: 360px;
+    height: 360px;
+    background-position: center;
+    border-width: 2px;
+    
+  }
+  .form-wrapper{
+    align-items: center;
+justify-content: center;
+width: 100vw;
+  }
+  .info-text{
+    font-size: 25px;
+    width: 100vw;
+    margin-bottom: 20px;
+    height: fit-content;
+    text-align: center;
+    
+  }
+  .form{
+    width: 100vw;
+    padding: 0px 2px 0px 2px;
+    
+
   }
 }
 
